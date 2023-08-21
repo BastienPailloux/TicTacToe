@@ -16,7 +16,7 @@ class Game < ApplicationRecord
         box = Box.new
         box.x = x
         box.y = y
-        box.state = "unchecked"
+        box.state = " "
         box.game = self
         box.save!
       end

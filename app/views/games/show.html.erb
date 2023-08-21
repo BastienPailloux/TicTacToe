@@ -1,1 +1,33 @@
-<h1>New game</h1>
+<h1>Tic Tac Toe</h1>
+
+<table>
+  <tbody>
+    <tr>
+      <% @boxes_fl.each do |box| %>
+        <td>
+          <%= link_to game_box_path(box.game, box), data: { turbo_method: :patch } do %>
+            <div class="box"><%= box.state %></div>
+          <% end %>
+        </td>
+      <% end %>
+    </tr>
+    <tr>
+      <% @boxes_sl.each do |box| %>
+        <td>
+          <%= link_to game_box_path(box.game, box), data: { turbo_method: :patch } do %>
+            <div class="box"><%= box.state %></div>
+          <% end %>
+        </td>
+      <% end %>
+    </tr>
+    <tr>
+      <% @boxes_tl.each do |box| %>
+        <td>
+          <%= link_to game_box_path(box.game, box), data: { turbo_method: :patch } do %>
+            <div class="box"><%= box.state %></div>
+          <% end %>
+        </td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
